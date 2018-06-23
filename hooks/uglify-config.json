@@ -1,0 +1,37 @@
+{
+  "alwaysRun": false,
+  "recursiveFolderSearch": true,
+  "foldersToProcess": [
+    "js",
+    "css",
+    "img",
+    "build"
+  ],
+  "uglifyJsOptions": {
+    "compress": {
+      "drop_console": true,
+      "drop_debugger": true,
+      "unused": false,
+      "passes": 2,
+      "toplevel": true,
+      "inline": false,
+      "keep_fnames": true
+    },
+    "mangle": {
+      "keep_fnames": true,
+      "toplevel": true,
+      "reserved": ["Appodeal","codrova","createjs","Cocoon","Howler","removeEventListener","window", "document","$", "createElement","getElementById","getElementsByTagName", "toDataURL","preventDefault", "dataURI", "plugins", "socialsharing"],
+      "properties": {
+        "reserved": ["createjs","Cocoon","Howler","mute","removeEventListener","window", "document","$", "createElement","getElementById","getElementsByTagName", "toDataURL","preventDefault","dataURI", "plugins", "socialsharing"]
+      }
+    },
+    "nameCache": {},
+    "output": {
+      "code": true
+    },
+    "warnings": true
+     },
+  "cleanCssOptions": {
+    "specialComments": "all"
+  }
+}

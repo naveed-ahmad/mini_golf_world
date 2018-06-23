@@ -1,0 +1,117 @@
+{
+  "project_info": {
+    "project_number": "204838666345",
+    "firebase_url": "https://pirates-adventure.firebaseio.com",
+    "project_id": "pirates-adventure",
+    "storage_bucket": "pirates-adventure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204838666345:android:36807f6374f20871",
+        "android_client_info": {
+          "package_name": "com.gameslab.mini_golf_world"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204838666345-i4htigod6bu4qte2urn6lp0ims6phgml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxGYdTgXxABcW5-QC2E9G_0033pn0x6ac"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204838666345:android:407f83e5ca248c57",
+        "android_client_info": {
+          "package_name": "com.gameslab.pinball_space_adventure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204838666345-i4htigod6bu4qte2urn6lp0ims6phgml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxGYdTgXxABcW5-QC2E9G_0033pn0x6ac"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204838666345:android:68536a56781518b4",
+        "android_client_info": {
+          "package_name": "com.gameslab.piratesadventure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204838666345-b333hkl396gt18c51ufulraq45cgb1h9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gameslab.piratesadventure",
+            "certificate_hash": "044ed49504233905bbdb8f5950e9c802464d9f12"
+          }
+        },
+        {
+          "client_id": "204838666345-i4htigod6bu4qte2urn6lp0ims6phgml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxGYdTgXxABcW5-QC2E9G_0033pn0x6ac"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204838666345-i4htigod6bu4qte2urn6lp0ims6phgml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
