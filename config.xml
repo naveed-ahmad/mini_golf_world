@@ -31,9 +31,9 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <engine name="browser" spec="^5.0.3" />
     <plugin name="cordova-plugin-admobpro-firebase" spec="^2.31.6" />
     <plugin name="cordova-plugin-firebase-analytics" spec="^1.0.0" />
     <plugin name="cordova-plugin-crypt-file-ng" spec="https://github.com/qhng/cordova-plugin-crypt-file" />
-    <engine name="android" spec="~7.0.0" />
+    <engine name="browser" spec="^5.0.3" />
+    <engine name="android" spec="^7.0.0" />
 </widget>
