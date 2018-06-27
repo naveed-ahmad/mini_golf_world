@@ -11,8 +11,7 @@ function CAchievementStars(oSprite, iX, iY, oParentContainer, szSound) {
     var _oStarContainer;
     var _oParent;
 
-
-    this._init = function(oSprite, iX, iY, oParentContainer, szSound) {
+    this._GamesLab_init = function(oSprite, iX, iY, oParentContainer, szSound) {
 
         iNumStar = 3;
 
@@ -76,18 +75,18 @@ function CAchievementStars(oSprite, iX, iY, oParentContainer, szSound) {
         oParentContainer.removeChild(_oStarContainer);
     };
 
-    this.getContainer = function() {
+    this._GamesLab_getContainer = function() {
         return _oStarContainer;
     };
 
-    this.startLitStar = function(iNumStar) {
+    this._GamesLab_startLitStar = function(iNumStar) {
         for (var i = 0; i < iNumStar; i++) {
             _aLitStar[i].scaleX = _aLitStar[i].scaleY = 1;
             _aLitStar[i].alpha = 1;
         }
     };
 
-    this.playSequentialMode = function(iNumToLit, iAnimationTime, szEffect) {
+    this._GamesLab_playSequentialMode = function(iNumToLit, iAnimationTime, szEffect) {
 
         var iDelay = iAnimationTime / (iNumToLit - 1);
 
@@ -101,7 +100,7 @@ function CAchievementStars(oSprite, iX, iY, oParentContainer, szSound) {
 
                     for (var i = 0; i < iNumToLit; i++) {
                         new createjs.Tween.get(_aLitStar[i]).wait(i * iDelay).call(function() {
-                            _oParent._playSound();
+                            _oParent._GamesLab_playSound();
                         }).to({
                             scaleX: 1,
                             scaleY: 1
@@ -118,7 +117,7 @@ function CAchievementStars(oSprite, iX, iY, oParentContainer, szSound) {
 
                     for (var i = 0; i < iNumToLit; i++) {
                         new createjs.Tween.get(_aLitStar[i]).wait(i * iDelay).call(function() {
-                            _oParent._playSound();
+                            _oParent._GamesLab_playSound();
                         }).to({
                             alpha: 1
                         }, 750);
@@ -129,7 +128,7 @@ function CAchievementStars(oSprite, iX, iY, oParentContainer, szSound) {
 
     };
 
-    this.playManualMode = function(iIndex, szEffect) {
+    this._GamesLab_playManualMode = function(iIndex, szEffect) {
 
         switch (szEffect) {
 
@@ -152,16 +151,14 @@ function CAchievementStars(oSprite, iX, iY, oParentContainer, szSound) {
                 }
         }
 
-        this._playSound();
+        this._GamesLab_playSound();
 
     };
 
-    this._playSound = function() {
+    this._GamesLab_playSound = function() {
         playSound(szSound, 1, 0);
     };
 
     _oParent = this;
-    this._init(oSprite, iX, iY, oParentContainer, szSound);
-
-
+    this._GamesLab_init(oSprite, iX, iY, oParentContainer, szSound);
 }

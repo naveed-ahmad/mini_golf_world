@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.gameslab.mini_golf_world" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>mini_golf_world</name>
+    <name>Mini Golf</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -19,7 +19,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="enabled" value="true" />
-        <preference name="Orientation" value="portrait" />
+        <preference name="Orientation" value="landscape" />
         <preference name="Fullscreen" value="true" />
         <preference default="15.0.0" name="FIREBASE_CORE_VERSION" />
         <resource-file src="google-services.json" target="app/google-services.json" />

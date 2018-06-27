@@ -8,7 +8,7 @@ function CEndPanel(oSpriteBg) {
     var _oButMenu;
     var _oFade;
 
-    this._init = function(oSpriteBg) {
+    this._GamesLab_init = function(oSpriteBg) {
 
         if (DISABLE_SOUND_MOBILE === false || s_bMobile === false) {
             new createjs.Tween.get(s_oSoundTrack).to({
@@ -58,8 +58,7 @@ function CEndPanel(oSpriteBg) {
         s_oStage.addChild(_oGroup);
 
         cordova.fireDocumentEvent("show_interlevel_ad");
-
-    };
+   };
 
     this.unload = function() {
 
@@ -70,7 +69,6 @@ function CEndPanel(oSpriteBg) {
         _oMsgText.text = TEXT_ALL_COMPLETE;
 
         _oGroup.visible = true;
-
 
         createjs.Tween.get(_oGroup).to({
             alpha: 1
@@ -92,7 +90,7 @@ function CEndPanel(oSpriteBg) {
         s_oGame.onExit();
     };
 
-    this._init(oSpriteBg);
+    this._GamesLab_init(oSpriteBg);
 
     return this;
 }

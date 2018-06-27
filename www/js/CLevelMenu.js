@@ -20,9 +20,9 @@ function CLevelMenu() {
     var _pStartPosExit;
     var _pStartPosAudio;
 
-    this._init = function() {
+    this._GamesLab_init = function() {
       _aLevelScore = s_oLocalStorage.getAllLevelsScore();
-      _iCurLevelActive = 18;
+      _iCurLevelActive = s_oLocalStorage.getLastPlayedLevel();
 
         _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
         _oBg.x = 0;
@@ -221,7 +221,7 @@ function CLevelMenu() {
 
 
     s_oLevelMenu = this;
-    this._init();
+    this._GamesLab_init();
 
 };
 

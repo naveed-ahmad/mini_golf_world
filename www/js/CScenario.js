@@ -30,7 +30,7 @@ function CScenario(iLevel) {
         return _oDemo;
     };
 
-    this._init = function() {
+    this._GamesLab_init = function() {
         _iTimeStep = 1 / 60;
 
         _iCurSandCollisionID = null;
@@ -426,10 +426,10 @@ function CScenario(iLevel) {
     s_oScenario = this;
 
     if (SHOW_3D_RENDER) {
-        _oDemo.addScene("Test", this._init);
+        _oDemo.addScene("Test", this._GamesLab_init);
         _oDemo.start();
     } else {
-        this._init();
+        this._GamesLab_init();
     }
 }
 

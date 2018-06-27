@@ -15,11 +15,11 @@ function CMenu() {
     var _pStartPosContinue;
     var _pStartPosCredits;
 
-    this._init = function() {
+    this._GamesLab_init = function() {
         _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
         s_oStage.addChild(_oBg);
 
-        var oSprite = s_oSpriteLibrary.getSprite('menu_text_minigolf');
+      var oSprite = s_oSpriteLibrary.getSprite('menu_text_minigolf');
         _oMinigolfText = createBitmap(oSprite);
         _oMinigolfText.regX = oSprite.width / 2;
         _oMinigolfText.regY = oSprite.height / 2;
@@ -94,14 +94,14 @@ function CMenu() {
             _oButPlay.trembleAnimation();
         }
 
-        var oSprite = s_oSpriteLibrary.getSprite('but_info');
+        /*var oSprite = s_oSpriteLibrary.getSprite('but_info');
         _pStartPosCredits = {
             x: (oSprite.height / 2) + 10,
             y: (oSprite.height / 2) + 10
         };
         _oCreditsBut = new CGfxButton((CANVAS_WIDTH / 2), CANVAS_HEIGHT - 240, oSprite, s_oStage);
         _oCreditsBut.addEventListener(ON_MOUSE_UP, this._onCreditsBut, this);
-
+        */
         if (DISABLE_SOUND_MOBILE === false || s_bMobile === false) {
             var oSprite = s_oSpriteLibrary.getSprite('audio_icon');
             _pStartPosAudio = {
@@ -126,7 +126,7 @@ function CMenu() {
     };
   
     this._GamesLab_refreshButtonPos = function(iNewX, iNewY) {
-        _oCreditsBut.setPosition(_pStartPosCredits.x + iNewX, iNewY + _pStartPosCredits.y);
+      //  _oCreditsBut.setPosition(_pStartPosCredits.x + iNewX, iNewY + _pStartPosCredits.y);
             _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX, iNewY + _pStartPosAudio.y);
     };
 
@@ -160,7 +160,6 @@ function CMenu() {
             alpha: 1
         }, 500).call(function() {
             oParent.unload();
-            cordova.fireDocumentEvent("start_session");
             s_oMain.gotoLevelMenu();
         });
 
@@ -172,10 +171,7 @@ function CMenu() {
     };
 
     this.removeDataAndContinue = function() {
-        s_oLocalStorage.resetAllData();
-
-        cordova.fireDocumentEvent("start_session");
-        s_oMenu._onButPlayRelease();
+       s_oMenu._onButPlayRelease();
     };
 
     this._onCreditsBut = function() {
@@ -184,7 +180,8 @@ function CMenu() {
 
     s_oMenu = this;
 
-    this._init();
+    this._GamesLab_init();
 }
 
 var s_oMenu = null;
+var flashMessage;

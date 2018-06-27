@@ -6,7 +6,7 @@ function CHelpPanel(_oHelpContainer) {
     var _oBall;
     var _oParent;
 
-    this._init = function(_oHelpContainer) {
+    this._GamesLab_init = function(_oHelpContainer) {
 
         var szText;
 
@@ -103,6 +103,6 @@ function CHelpPanel(_oHelpContainer) {
     };
 
     _oParent = this;
-    this._init(_oHelpContainer);
+    this._GamesLab_init(_oHelpContainer);
 
 }

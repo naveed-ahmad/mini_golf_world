@@ -22,7 +22,7 @@ function CInterface(oParentContainer) {
 
     var _pStartPosCenterBallView;
 
-    this._init = function(oParentContainer) {
+    this._GamesLab_init = function(oParentContainer) {
 
         _pStartPosLaunch = {
             x: (CANVAS_WIDTH / 2),
@@ -203,7 +203,7 @@ function CInterface(oParentContainer) {
 
     s_oInterface = this;
 
-    this._init(oParentContainer);
+    this._GamesLab_init(oParentContainer);
 
     return this;
 }

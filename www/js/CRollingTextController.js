@@ -14,7 +14,7 @@ function CRollingTextController(oTarget, oTargetStroke, iAmountToIncrease, iTime
     var _oTarget;
     var _oTargetStroke;
 
-    this._init = function(oTarget, oTargetStroke, iAmountToIncrease, iTime, szEasing) {
+    this._GamesLab_init = function(oTarget, oTargetStroke, iAmountToIncrease, iTime, szEasing) {
         _aCbCompleted = new Array();
         _aCbOwner = new Array();
 
@@ -151,5 +151,5 @@ function CRollingTextController(oTarget, oTargetStroke, iAmountToIncrease, iTime
         }
     };
 
-    this._init(oTarget, oTargetStroke, iAmountToIncrease, iTime, szEasing);
+    this._GamesLab_init(oTarget, oTargetStroke, iAmountToIncrease, iTime, szEasing);
 };

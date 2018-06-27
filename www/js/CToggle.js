@@ -4,7 +4,7 @@ function CToggle(iXPos, iYPos, oSprite, bActive, oParentContainer) {
     var _aCbOwner;
     var _oButton;
 
-    this._init = function(iXPos, iYPos, oSprite, bActive, oParentContainer) {
+    this._GamesLab_init = function(iXPos, iYPos, oSprite, bActive, oParentContainer) {
         _aCbCompleted = new Array();
         _aCbOwner = new Array();
 
@@ -39,7 +39,7 @@ function CToggle(iXPos, iYPos, oSprite, bActive, oParentContainer) {
 
         oParentContainer.addChild(_oButton);
 
-        this._initListener();
+        this._GamesLab_initListener();
     };
 
     this.unload = function() {
@@ -49,7 +49,7 @@ function CToggle(iXPos, iYPos, oSprite, bActive, oParentContainer) {
         oParentContainer.removeChild(_oButton);
     };
 
-    this._initListener = function() {
+    this._GamesLab_initListener = function() {
         _oButton.on("mousedown", this.buttonDown);
         _oButton.on("pressup", this.buttonRelease);
     };
@@ -96,5 +96,5 @@ function CToggle(iXPos, iYPos, oSprite, bActive, oParentContainer) {
         _oButton.y = iY;
     };
 
-    this._init(iXPos, iYPos, oSprite, bActive, oParentContainer);
+    this._GamesLab_init(iXPos, iYPos, oSprite, bActive, oParentContainer);
 }

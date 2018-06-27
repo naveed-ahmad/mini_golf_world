@@ -6,7 +6,7 @@ function CBackground(iLevel, oElementContainer) {
 
     var _pBGMoveStartPoint;
 
-    this._init = function(iLevel, oElementContainer) {
+    this._GamesLab_init = function(iLevel, oElementContainer) {
 
 
         _oBg = new createjs.Container();
@@ -138,5 +138,5 @@ function CBackground(iLevel, oElementContainer) {
     };
 
     _oParent = this;
-    this._init(iLevel, oElementContainer);
+    this._GamesLab_init(iLevel, oElementContainer);
 }

@@ -6,7 +6,7 @@ function CLoadingScreen(oParentContainer) {
     var _oContainer;
     var _oParentContainer = oParentContainer;
 
-    this._init = function() {
+    this._GamesLab_init = function() {
 
         _oContainer = new createjs.Container();
         _oParentContainer.addChild(_oContainer);
@@ -65,7 +65,7 @@ function CLoadingScreen(oParentContainer) {
         });
     };
 
-    this._init();
+    this._GamesLab_init();
 
     return this;
 }

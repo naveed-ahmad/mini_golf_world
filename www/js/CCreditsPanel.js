@@ -7,7 +7,7 @@ function CCreditsPanel() {
 
     var _pStartPanelPos;
 
-    this._init = function() {
+    this._GamesLab_init = function() {
 
         _oFade = new createjs.Shape();
         _oFade.graphics.beginFill("black").drawRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -69,13 +69,6 @@ function CCreditsPanel() {
         oLink.lineWidth = 500;
         _oPanelContainer.addChild(oLink);
 
-        var oSprite = s_oSpriteLibrary.getSprite('ctl_logo');
-        _oLogo = createBitmap(oSprite);
-        _oLogo.on("mousedown", this._onLogoButRelease);
-        _oLogo.regX = oSprite.width / 2;
-        _oLogo.regY = oSprite.height / 2;
-        _oPanelContainer.addChild(_oLogo);
-
         var oSprite = s_oSpriteLibrary.getSprite('but_exit');
         _oButExit = new CGfxButton(330, -200, oSprite, _oPanelContainer);
         _oButExit.addEventListener(ON_MOUSE_UP, this.unload, this);
@@ -99,20 +92,7 @@ function CCreditsPanel() {
         });
 
         _oFade.off("mousedown", function() {});
-        _oLogo.off("mousedown", this._onLogoButRelease);
-
-
     };
 
-    this._onLogoButRelease = function() {
-        CreateLinksInGame('Mini-Golf-World', 'pregame', 'logo');
-    };
-
-    this._onMoreGamesReleased = function() {
-        CreateLinksInGame('Mini-Golf-World', 'pregame', 'logo');
-    };
-
-    this._init();
-
-
+    this._GamesLab_init();
 };

@@ -5774,7 +5774,7 @@ Object.assign(THREE.AnimationClip, {
 });
 THREE.AnimationMixer = function(a) {
     this._root = a;
-    this._initMemoryManager();
+    this._GamesLab_initMemoryManager();
     this.time = this._accuIndex = 0;
     this.timeScale = 1
 };

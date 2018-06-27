@@ -4,7 +4,7 @@ function CTextButton(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize) 
     var _aCbOwner;
     var _oButton;
 
-    this._init = function(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize) {
+    this._GamesLab_init = function(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize) {
 
         _aCbCompleted = new Array();
         _aCbOwner = new Array();
@@ -39,7 +39,7 @@ function CTextButton(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize) 
 
         s_oStage.addChild(_oButton);
 
-        this._initListener();
+        this._GamesLab_initListener();
     };
 
     this.unload = function() {
@@ -53,7 +53,7 @@ function CTextButton(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize) 
         _oButton.visible = bVisible;
     };
 
-    this._initListener = function() {
+    this._GamesLab_initListener = function() {
         oParent = this;
 
         _oButton.on("mousedown", this.buttonDown);
@@ -110,7 +110,7 @@ function CTextButton(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize) 
         return _oButton.y;
     };
 
-    this._init(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize);
+    this._GamesLab_init(iXPos, iYPos, oSprite, szText, szFont, szColor, iFontSize);
 
     return this;
 

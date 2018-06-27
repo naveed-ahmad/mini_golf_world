@@ -47,6 +47,7 @@ function CMain ( oData ) {
     s_bAudioActive = s_oLocalStorage.getItem ( 'mute' ) != 'true';
 
     _bUpdate = true;
+    cordova.fireDocumentEvent("start_session");
   };
 
   this._GamesLab_soundLoaded = function () {
@@ -59,7 +60,7 @@ function CMain ( oData ) {
     }
   };
 
-  this._initSounds = function () {
+  this._GamesLab_initSounds = function () {
     var aSoundsInfo = new Array ();
 
     aSoundsInfo.push ( {
@@ -311,7 +312,7 @@ function CMain ( oData ) {
 
   this.preloaderReady = function () {
     if (DISABLE_SOUND_MOBILE === false || s_bMobile === false) {
-      this._initSounds ();
+      this._GamesLab_initSounds ();
       s_oSoundTrack = createjs.Sound.play ( "soundtrack", {
         loop: - 1
       } );

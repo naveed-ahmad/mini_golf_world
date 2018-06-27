@@ -18,7 +18,7 @@ function CLevelBut(iXPos, iYPos, oSprite, bActive, Level, oParentContainer) {
     var _oTween;
     var _oParent;
 
-    this._init = function(iXPos, iYPos, oSprite, oParentContainer) {
+    this._GamesLab_init = function(iXPos, iYPos, oSprite, oParentContainer) {
         _bDisabled = false;
 
         _iScaleFactor = 1;
@@ -66,7 +66,7 @@ function CLevelBut(iXPos, iYPos, oSprite, bActive, Level, oParentContainer) {
             _oBg.gotoAndStop("off");
         }
 
-        this._initListener();
+        this._GamesLab_initListener();
     };
 
     this.unload = function() {
@@ -112,8 +112,8 @@ function CLevelBut(iXPos, iYPos, oSprite, bActive, Level, oParentContainer) {
         var oSprite = s_oSpriteLibrary.getSprite('star');
         _oStar = new CAchievementStars(oSprite, 0, -oSprite.height / 2 - 14, _oButton);
 
-        _oStar.getContainer().scaleX = _oStar.getContainer().scaleY = 0.40;
-        _oStar.startLitStar(iNumLitStar);
+        _oStar._GamesLab_getContainer().scaleX = _oStar._GamesLab_getContainer().scaleY = 0.40;
+        _oStar._GamesLab_startLitStar(iNumLitStar);
     };
 
     this.addScore = function(iScore) {
@@ -150,7 +150,7 @@ function CLevelBut(iXPos, iYPos, oSprite, bActive, Level, oParentContainer) {
         _oButton.addChild(_oLevel);
     };
 
-    this._initListener = function() {
+    this._GamesLab_initListener = function() {
         if (s_bMobile) {
             _oButton.on("mousedown", this.buttonDown);
             _oButton.on("pressup", this.buttonRelease);
@@ -262,7 +262,7 @@ function CLevelBut(iXPos, iYPos, oSprite, bActive, Level, oParentContainer) {
     };
 
     _oParent = this;
-    this._init(iXPos, iYPos, oSprite, oParentContainer);
+    this._GamesLab_init(iXPos, iYPos, oSprite, oParentContainer);
 
     return this;
 }

@@ -13,7 +13,6 @@ var adFailedRetryLimit = 3;
 
 
 function prepareAdmobInterstitial ( autoShow ) {
-  return;
   var iRand = Math.floor ( Math.random () * 100 );
   var adId;
 
@@ -56,7 +55,6 @@ function initAdMobFreeAds () {
   } );
 
   document.addEventListener ( 'onAdDismiss', function ( e ) {
-
     if (typeof e.originalEvent !== 'undefined') e = e.originalEvent;
     var data = e.data || e;
     logFireBaseEvent ( 'onAdDismiss', data );
@@ -159,8 +157,20 @@ document.addEventListener ( "hide_banner", function ( evt ) {
   }, 10000 );
 } );
 
+document.addEventListener ( "start_level", function ( evt ) {
+  logFireBaseEvent('start_level_'+evt.lvl, {lvl: evt.lvl});
+});
+document.addEventListener ( "end_level", function ( evt ) {
+  logFireBaseEvent('end_level_'+evt.lvl, {lvl: evt.lvl});
+});
+
+document.addEventListener ( "restart_level", function ( evt ) {
+  logFireBaseEvent('restart_level'+evt.lvl, {lvl: evt.lvl});
+});
+
 
 document.addEventListener ( "show_interlevel_ad", function ( evt ) {
+
   try {
     _GamesLabs_showInterstitialAd ();
 

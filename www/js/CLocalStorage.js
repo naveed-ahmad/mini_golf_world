@@ -18,6 +18,13 @@ function CLocalStorage () {
     }
   }
 
+  this.helpShow = function ( helpNum ) {
+   return this.getItem('help'+helpNum) === 't';
+  }
+  this.setHelpShown = function (helpNum  ) {
+
+    this.saveItem('help'+helpNum, 't');
+  }
   this.saveItem = function ( key, val ) {
     try {
       window.localStorage.setItem ( szName + key, val );
@@ -44,11 +51,21 @@ function CLocalStorage () {
   }
 
   this.saveLevelScore = function ( lvl, score ) {
+    var lastLevel = this.getLastPlayedLevel();
+    if(lvl >= lastLevel)
+     this.saveItem('lastLevel', lvl+1);
+
     this.saveItem ( 'lvl_' + lvl + 'score', score );
 
     var all = this.getAllLevelsScore();
     all[lvl]=score;
+    var total=0;
 
+    for(i=0;i<18;i++)
+      if(all[i+''])
+        total = total + all[i];
+    
+    this.saveTotalScore(total);
     this.saveItem ( 'all_lvl_score', JSON.stringify(all) );
  }
   
@@ -63,6 +80,10 @@ function CLocalStorage () {
 
   this.saveBestScore = function ( score ) {
     this.saveItem ( 'bestScore', score );
+  }
+
+  this.getLastPlayedLevel  = function (  ) {
+   return parseInt(this.getItem("lastLevel") || 0);
   }
 
   this.getItem = function ( key ) {

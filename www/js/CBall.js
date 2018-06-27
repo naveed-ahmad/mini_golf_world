@@ -25,7 +25,7 @@ function CBall(iXPos, iYPos, oSprite, oElementContainer) {
     var _v2DScreenReferenceVector;
 
 
-    this._init = function(iXPos, iYPos, oSprite, oElementContainer) {
+    this._GamesLab_init = function(iXPos, iYPos, oSprite, oElementContainer) {
         _bIsMoving = false;
 
         _iNumBlink = 3;
@@ -399,7 +399,7 @@ function CBall(iXPos, iYPos, oSprite, oElementContainer) {
         oElementContainer.setChildIndex(_oBall, iValue);
     };
 
-    this._init(iXPos, iYPos, oSprite, oElementContainer);
+    this._GamesLab_init(iXPos, iYPos, oSprite, oElementContainer);
 
     _oParent = this;
     return this;

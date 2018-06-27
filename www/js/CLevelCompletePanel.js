@@ -18,7 +18,7 @@ function CLevelCompletePanel ( oSpriteBg ) {
   var _oAchievementStars;
   var _oRollingText;
 
-  this._init = function ( oSpriteBg ) {
+  this._GamesLab_init = function ( oSpriteBg ) {
 
     playSound ( "win_level", 1, 0 );
 
@@ -115,9 +115,7 @@ function CLevelCompletePanel ( oSpriteBg ) {
       _oButNext = null;
 
     } );
-
-
-  };
+ };
 
   this.show = function ( iShot, iTime, iLv ) {
     _oMsgTextBack.text = TEXT_COMPLETE;
@@ -247,7 +245,7 @@ function CLevelCompletePanel ( oSpriteBg ) {
     var aScore = s_oLocalStorage.getLevelScore ( iLevel );
 
     if (aScore < iScore) {
-      s_oLocalStorage.saveLevelScore ( iLevel, aScore );
+      s_oLocalStorage.saveLevelScore ( iLevel, iScore );
     }
 
     _iTotalScore = s_oLocalStorage.getTotalScore ();
@@ -274,10 +272,8 @@ function CLevelCompletePanel ( oSpriteBg ) {
       _oButNext.unload ();
       _oButNext = null;
 
-      s_oGame.nextLevel ();
-
+      s_oGame._GamesLab_nextLevel ();
     } );
-
   };
 
   this._onRestart = function () {
@@ -317,12 +313,12 @@ function CLevelCompletePanel ( oSpriteBg ) {
 
   this._onRollingText = function ( iStep ) {
 
-    _oAchievementStars.playManualMode ( iStep, STAR_EFFECT_SCALE );
+    _oAchievementStars._GamesLab_playManualMode ( iStep, STAR_EFFECT_SCALE );
 
   };
 
   _oParent = this;
-  this._init ( oSpriteBg );
+  this._GamesLab_init ( oSpriteBg );
 
   return this;
 }

@@ -3,7 +3,7 @@ function CVector2(iX, iY) {
     var x;
     var y;
 
-    this._init = function(iX, iY) {
+    this._GamesLab_init = function(iX, iY) {
         x = iX;
         y = iY;
     };
@@ -124,5 +124,5 @@ function CVector2(iX, iY) {
         y = fNewX * (-Math.sin(iAngle)) + fNewY * Math.cos(iAngle);
     }
 
-    this._init(iX, iY);
+    this._GamesLab_init(iX, iY);
 }

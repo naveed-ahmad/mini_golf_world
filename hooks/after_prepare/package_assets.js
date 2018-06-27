@@ -65,16 +65,15 @@ function run () {
 }
 function concatGameFiles ( wwwPath ) {
   var game_js_files = [
-    path.join ( wwwPath, "js","createjs.min.js"),
-    path.join ( wwwPath, "js","howler.min.js"),
-    path.join ( wwwPath, "js","eventHelper.js"),
     path.join ( wwwPath, "js","ctl_utils.js"),
+    path.join ( wwwPath, "js","CMotivationalText.js"),
     path.join ( wwwPath, "js","sprite_lib.js"),
     path.join ( wwwPath, "js","settings.js"),
     path.join ( wwwPath, "js","levelSettings.js"),
     path.join ( wwwPath, "js","CLocalStorage.js"),
     path.join ( wwwPath, "js","CTweenController.js"),
     path.join ( wwwPath, "js","CRollingTextController.js"),
+    path.join ( wwwPath, "js","eventHelper.js"),
     path.join ( wwwPath, "js","CLang.js"),
     path.join ( wwwPath, "js","CPreloader.js"),
     path.join ( wwwPath, "js","CLoadingScreen.js"),

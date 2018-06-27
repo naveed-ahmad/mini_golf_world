@@ -7,7 +7,7 @@ function CPreloader() {
     var _oFade;
     var _oContainer;
 
-    this._init = function() {
+    this._GamesLab_init = function() {
         s_oSpriteLibrary.init(this._onImagesLoaded, this._onAllImagesLoaded, this);
         s_oSpriteLibrary.addSprite("bg_menu", "./sprites/bg_menu.jpg");
         s_oSpriteLibrary.addSprite("progress_bar", "./sprites/progress_bar.png");
@@ -36,12 +36,12 @@ function CPreloader() {
     this._onImagesLoaded = function() {};
 
     this._onAllImagesLoaded = function() {
-        this.attachSprites();
+        this._GamesLab_attachSprites();
 
         s_oMain.preloaderReady();
     };
 
-    this.attachSprites = function() {
+    this._GamesLab_attachSprites = function() {
 
         var oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
         _oContainer.addChild(oBg);
@@ -83,5 +83,5 @@ function CPreloader() {
         _oMaskPreloader.graphics.beginFill("rgba(255,255,255,0.01)").drawRect(_oProgressBar.x, _oProgressBar.y, iNewMaskWidth, _iMaskHeight);
     };
 
-    this._init();
+    this._GamesLab_init();
 }

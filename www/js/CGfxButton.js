@@ -9,7 +9,7 @@ function CGfxButton(iXPos, iYPos, oSprite, oParentContainer) {
     var _oParent
     var _oTween;
 
-    this._init = function(iXPos, iYPos, oSprite, oParentContainer) {
+    this._GamesLab_init = function(iXPos, iYPos, oSprite, oParentContainer) {
         _bDisabled = false;
         _bScalable = true;
 
@@ -29,7 +29,7 @@ function CGfxButton(iXPos, iYPos, oSprite, oParentContainer) {
         oParentContainer.addChild(_oButton);
 
 
-        this._initListener();
+        this._GamesLab_initListener();
     };
 
     this.unload = function() {
@@ -47,7 +47,7 @@ function CGfxButton(iXPos, iYPos, oSprite, oParentContainer) {
         _oButton.cursor = szValue;
     };
 
-    this._initListener = function() {
+    this._GamesLab_initListener = function() {
         _oButton.on("mousedown", this.buttonDown);
         _oButton.on("pressup", this.buttonRelease);
     };
@@ -155,7 +155,7 @@ function CGfxButton(iXPos, iYPos, oSprite, oParentContainer) {
         _bDisabled = !bVal;
     };
 
-    this._init(iXPos, iYPos, oSprite, oParentContainer);
+    this._GamesLab_init(iXPos, iYPos, oSprite, oParentContainer);
 
     _oParent = this;
     return this;

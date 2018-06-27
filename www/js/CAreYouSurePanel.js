@@ -10,7 +10,7 @@ function CAreYouSurePanel(oFunction) {
 
     var _pStartPanelPos;
 
-    this._init = function(oFunction) {
+    this._GamesLab_init = function(oFunction) {
         _oFade = new createjs.Shape();
         _oFade.graphics.beginFill("black").drawRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
         _oFade.alpha = 0;
@@ -94,6 +94,8 @@ function CAreYouSurePanel(oFunction) {
             _oParent.unload();
 
         });
+
+        cordova.fireDocumentEvent('show_interlevel_ad');
     };
 
     this.unload = function() {
@@ -112,5 +114,5 @@ function CAreYouSurePanel(oFunction) {
     };
 
     _oParent = this;
-    this._init(oFunction);
+    this._GamesLab_init(oFunction);
 }

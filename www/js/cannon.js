@@ -101,8 +101,7 @@
             2: [function(_dereq_, module, exports) {
                 // Export classes
                 module.exports = {
-                    version: _dereq_('../package.json').version,
-
+                    version: '0.6.2',
                     AABB: _dereq_('./collision/AABB'),
                     ArrayCollisionMatrix: _dereq_('./collision/ArrayCollisionMatrix'),
                     Body: _dereq_('./objects/Body'),
