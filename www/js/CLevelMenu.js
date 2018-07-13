@@ -167,17 +167,20 @@ function CLevelMenu() {
         }
 
         for (var i = 0; i < _iCurLevelActive; i++) {
+          if(_aLevels[i]){
             _aLevels[i].enable();
 
             if (_aLevelScore[i] > 0 && _aLevelScore[i] < PAR_POINTS - ADDED_POINTS) {
-                _aLevels[i].addStar(1);
+              _aLevels[i].addStar(1);
             } else if (_aLevelScore[i] >= PAR_POINTS - ADDED_POINTS && _aLevelScore[i] < PAR_POINTS) {
-                _aLevels[i].addStar(2);
+              _aLevels[i].addStar(2);
             } else {
-                _aLevels[i].addStar(3);
+              _aLevels[i].addStar(3);
             }
 
             _aLevels[i].addScore(_aLevelScore[i]);
+          }
+
         }
 
     };

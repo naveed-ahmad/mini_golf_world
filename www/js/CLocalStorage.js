@@ -83,7 +83,7 @@ function CLocalStorage () {
   }
 
   this.getLastPlayedLevel  = function (  ) {
-   return parseInt(this.getItem("lastLevel") || 0);
+    return parseInt(this.getItem("lastLevel") || 0);
   }
 
   this.getItem = function ( key ) {
