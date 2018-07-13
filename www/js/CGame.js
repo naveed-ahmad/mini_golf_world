@@ -64,6 +64,8 @@ function CGame ( oData, iLevel ) {
   var _fLerp;
 
   this._GamesLab_init = function ( iLevel ) {
+    cordova.fireDocumentEvent("hide_banner");
+
     _bBallInHole = false;
     _bBallOnTerrain = true;
     _bBallOutFromScreen = false;
@@ -475,7 +477,9 @@ function CGame ( oData, iLevel ) {
     _oParent.unloadLevel ();
 
     setVolume ( 'soundtrack', 1 );
-    s_oMain._GamesLab_gotoMenu ();
+    cordova.fireDocumentEvent("show_interlevel_ad");
+
+      s_oMain._GamesLab_gotoMenu ();
   };
 
   this._onExitHelp = function () {

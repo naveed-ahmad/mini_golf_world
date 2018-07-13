@@ -21,8 +21,9 @@ function CLevelCompletePanel ( oSpriteBg ) {
   this._GamesLab_init = function ( oSpriteBg ) {
 
     playSound ( "win_level", 1, 0 );
+    cordova.fireDocumentEvent("show_banner");
 
-    _oFade = new createjs.Shape ();
+      _oFade = new createjs.Shape ();
     _oFade.graphics.beginFill ( "black" ).drawRect ( 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT );
     _oFade.alpha = 0;
     _oFade.on ( "mousedown", function () {

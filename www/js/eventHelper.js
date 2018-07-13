@@ -102,7 +102,7 @@ function _Gameslab_showBannerAd () {
   setTimeout ( function () {
     AdMob.createBanner ( {
       adId: admobid.banner,
-      position: AdMob.AD_POSITION.TOP_CENTER,
+      position: AdMob.AD_POSITION.BOTTOM_CENTER,
       autoShow: true,
       overlap: true,
       success: function () {

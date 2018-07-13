@@ -80,14 +80,12 @@ function CScenario(iLevel) {
 
         //           model FBX
         var manager = new THREE.LoadingManager();
-        manager.onProgress = function(item, loaded, total) {
-            console.log(item, loaded, total);
-        };
+        //manager.onProgress = function(item, loaded, total) {
+        //};
 
         var onProgress = function(xhr) {
             if (xhr.lengthComputable) {
                 var percentComplete = xhr.loaded / xhr.total * 100;
-                //console.log(Math.round(percentComplete, 2) + '% downloaded');
             }
         };
 
@@ -98,19 +96,13 @@ function CScenario(iLevel) {
 
         loader.load('./models/level_' + iLevel + '.fbx', function(objects) {
             s_oScenario.parseFile(objects);
-            s_oGame.scenarioLoaded();
             objects = null;
-
-        }, onProgress, onError);
+      }, onProgress, onError);
     };
 
     this.parseFile = function(oFile) {
-        //        console.log(oFile);
-
         for (var i = 0; i < oFile.children.length; i++) {
             var oMesh = oFile.children[i];
-
-            console.log("oMesh.name: " + oMesh.name);
 
             if (oMesh.name === "field") {
                 s_oScenario._createFieldBody(oMesh);
@@ -124,6 +116,7 @@ function CScenario(iLevel) {
                 s_oScenario._createWaterBody(oMesh);
             }
         }
+      s_oGame.scenarioLoaded();
     };
 
     this._createFieldBody = function(oMesh) {

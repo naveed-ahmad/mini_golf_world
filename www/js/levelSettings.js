@@ -101,7 +101,7 @@ FLAGS_POS[13] = [{
     x: -1396,
     y: 1048
 }];
-FLAGS_POS[14] = [{
+FLAGS_POS[17] = [{
     x: 692,
     y: -588
 }, {
@@ -122,7 +122,7 @@ FLAGS_POS[16] = [{
     x: -1276,
     y: 276
 }];
-FLAGS_POS[17] = [{
+FLAGS_POS[14] = [{
     x: 960,
     y: -764
 }, {
@@ -173,14 +173,14 @@ CAUSTICS_POS[12] = {
     scale: 1
 };
 CAUSTICS_POS[13] = null;
-CAUSTICS_POS[14] = {
+CAUSTICS_POS[17] = {
     x: 688,
     y: -60,
     scale: 0.4
 };
 CAUSTICS_POS[15] = null;
 CAUSTICS_POS[16] = null;
-CAUSTICS_POS[17] = {
+CAUSTICS_POS[14] = {
     x: 846,
     y: -496,
     scale: 1

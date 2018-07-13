@@ -22,9 +22,10 @@ function CLevelMenu() {
 
     this._GamesLab_init = function() {
       _aLevelScore = s_oLocalStorage.getAllLevelsScore();
-      _iCurLevelActive = s_oLocalStorage.getLastPlayedLevel();
+      _iCurLevelActive = 20;//s_oLocalStorage.getLastPlayedLevel();
+      cordova.fireDocumentEvent("show_banner");
 
-        _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
+      _oBg = createBitmap(s_oSpriteLibrary.getSprite('bg_menu'));
         _oBg.x = 0;
         _oBg.y = 0;
         s_oStage.addChild(_oBg);
