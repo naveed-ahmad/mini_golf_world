@@ -33,7 +33,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 
-
     <preference default="15.0.0" name="FIREBASE_CORE_VERSION" />
     <preference name="enabled" value="true" />
     <preference name="DisallowOverscroll" value="true" />
@@ -48,5 +47,4 @@
         <exclude>
         </exclude>
     </cryptfiles>
-
 </widget>
