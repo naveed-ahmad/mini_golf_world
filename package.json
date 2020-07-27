@@ -21,7 +21,6 @@
     "cordova-plugin-androidx": "^1.0.2",
     "cordova-plugin-androidx-adapter": "^1.1.1",
     "cordova-plugin-crypt-assets": "^0.2.0",
-    "cordova-plugin-firebase-analytics": "1.1.1",
     "cordova-plugin-network-information": "^2.0.2",
     "cordova-plugin-whitelist": "1.3.4",
     "cordova-support-android-plugin": "1.0.2",
@@ -36,9 +35,6 @@
     "plugins": {
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
-      "cordova-plugin-firebase-analytics": {
-        "FIREBASE_CORE_VERSION": "16.0.+"
-      },
       "cordova-plugin-whitelist": {},
       "cordova-support-android-plugin": {},
       "cordova-admob-plus": {
