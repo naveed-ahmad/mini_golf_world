@@ -64,7 +64,7 @@ function CGame ( oData, iLevel ) {
   var _fLerp;
 
   this._GamesLab_init = function ( iLevel ) {
-    cordova.fireDocumentEvent("hide_banner");
+    // cordova.fireDocumentEvent("hide_banner");
 
     _bBallInHole = false;
     _bBallOnTerrain = true;
@@ -477,9 +477,9 @@ function CGame ( oData, iLevel ) {
     _oParent.unloadLevel ();
 
     setVolume ( 'soundtrack', 1 );
-    cordova.fireDocumentEvent("show_interlevel_ad");
+    _GamesLabs_showInterstitialAd();
 
-      s_oMain._GamesLab_gotoMenu ();
+     s_oMain._GamesLab_gotoMenu ();
   };
 
   this._onExitHelp = function () {
@@ -532,7 +532,7 @@ function CGame ( oData, iLevel ) {
   };
 
   this.restartLevel = function () {
-    cordova.fireDocumentEvent ( "show_interlevel_ad" );
+    _GamesLabs_showInterstitialAd();
     cordova.fireDocumentEvent ( "restart_level", { lvl: _iLevel } );
     this.unload ();
     this._GamesLab_init ( _iLevel );

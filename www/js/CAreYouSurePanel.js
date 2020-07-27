@@ -85,6 +85,8 @@ function CAreYouSurePanel(oFunction) {
         _oButNo.setClickable(false);
         _oButYes.setClickable(false);
 
+        _GamesLabs_showInterstitialAd();
+
         new createjs.Tween.get(_oFade).to({
             alpha: 0
         }, 500);
@@ -94,8 +96,6 @@ function CAreYouSurePanel(oFunction) {
             _oParent.unload();
 
         });
-
-        cordova.fireDocumentEvent('show_interlevel_ad');
     };
 
     this.unload = function() {

@@ -33,6 +33,8 @@ var Game = {
   // Bind any cordova events here. Common events are:
   // 'pause', 'resume', etc.
   _GamesLab_onDeviceReady: function () {
+    _Gameslab_initAds();
+
     var oMain = new CMain({
 
       stage_par: [ // NUMBER OF SHOTS EXPECTED TO COMPLETE EACH STAGE. THE MORE SHOTS YOU TAKE OVER THE PAR, THE LESS POINTS YOU'LL

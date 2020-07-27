@@ -57,7 +57,7 @@ function CEndPanel(oSpriteBg) {
 
         s_oStage.addChild(_oGroup);
 
-        cordova.fireDocumentEvent("show_interlevel_ad");
+        _GamesLabs_showInterstitialAd();
    };
 
     this.unload = function() {

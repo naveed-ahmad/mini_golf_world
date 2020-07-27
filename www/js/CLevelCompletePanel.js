@@ -21,7 +21,7 @@ function CLevelCompletePanel ( oSpriteBg ) {
   this._GamesLab_init = function ( oSpriteBg ) {
 
     playSound ( "win_level", 1, 0 );
-    cordova.fireDocumentEvent("show_banner");
+    //cordova.fireDocumentEvent("show_banner");
 
       _oFade = new createjs.Shape ();
     _oFade.graphics.beginFill ( "black" ).drawRect ( 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT );
@@ -95,8 +95,7 @@ function CLevelCompletePanel ( oSpriteBg ) {
 
     s_oStage.addChild ( _oGroup );
 
-    cordova.fireDocumentEvent ( "show_interlevel_ad" );
-
+    _GamesLabs_showInterstitialAd();
   };
 
   this._unload = function () {

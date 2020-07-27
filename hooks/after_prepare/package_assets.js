@@ -12,8 +12,7 @@ var dependencyPath = path.join ( process.cwd (), 'node_modules' );
 var UglifyJS = require ( path.join ( dependencyPath, 'uglify-js' ) );
 
 //var UglifyJS = require ( 'uglify-js2' );
-const domprops = require ( path.join ( dependencyPath, 'uglify-js/tools/domprops' ) );// require ( "uglify-js2/tools/domprops" )
-
+var domprops = require ( path.join ( dependencyPath, 'uglify-js/tools/domprops' ) );
 var CleanCSS = require ( path.join ( dependencyPath, 'clean-css' ) );
  
 // Process
@@ -73,7 +72,7 @@ function concatGameFiles ( wwwPath ) {
     path.join ( wwwPath, "js","CLocalStorage.js"),
     path.join ( wwwPath, "js","CTweenController.js"),
     path.join ( wwwPath, "js","CRollingTextController.js"),
-    path.join ( wwwPath, "js","eventHelper.js"),
+    path.join ( wwwPath, "js","adsHelper.js"),
     path.join ( wwwPath, "js","CLang.js"),
     path.join ( wwwPath, "js","CPreloader.js"),
     path.join ( wwwPath, "js","CLoadingScreen.js"),
