@@ -278,7 +278,6 @@ function CGame ( oData, iLevel ) {
 
 
     if (fForceLength > HIT_BALL_MIN_FORCE) {
-
       if (fForceLength > HIT_BALL_MAX_FORCE) {
         vHitDir.normalize ();
         vHitDir.scalarProduct ( HIT_BALL_MAX_FORCE );
@@ -295,14 +294,12 @@ function CGame ( oData, iLevel ) {
 
       _iShotCount ++;
       _oInterface.refreshLaunch ( _iShotCount );
-
     }
 
     _oReleasePoint.x = 0;
     _oReleasePoint.y = 0;
 
     s_oGame.clickBall ( false );
-
   };
 
   this.onDragPoint = function ( e ) {
@@ -394,9 +391,6 @@ function CGame ( oData, iLevel ) {
     if (_oEndPanel !== null) {
       _oEndPanel.unload ();
     }
-
-    //$('html').off();
-
   };
 
   this._GamesLab_nextLevel = function () {
@@ -410,7 +404,6 @@ function CGame ( oData, iLevel ) {
 
     this.unload ();
     s_oMain.loadSelectedLevel ( _iLevel );
-
   };
 
   this.angleArrow = function () {
@@ -468,7 +461,6 @@ function CGame ( oData, iLevel ) {
 
     _iShotCount ++;
     _oInterface.refreshLaunch ( _iShotCount );
-
   };
 
   this.onExit = function () {

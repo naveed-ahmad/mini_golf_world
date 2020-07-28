@@ -161,6 +161,10 @@ function CInterface(oParentContainer) {
     };
 
     this.refreshLaunch = function(iLaunch) {
+        if(iLaunch > 2){
+            prepareAdmobInterstitial(false);
+        }
+
         _oLaunchText.text = TEXT_LAUNCH + ": " + iLaunch;
         _oLaunchTextStroke.text = TEXT_LAUNCH + ": " + iLaunch;
     };

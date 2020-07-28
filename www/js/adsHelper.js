@@ -18,25 +18,55 @@ var AD_KEYS = {
         android: "ca-app-pub-5477538004615349/1144520930",
         ios: "ca-app-pub-5477538004615349/3680347681"
     },
-    rewarded:  {
+    rewarded: {
         // replace with your ad unit IDs
         android: "ca-app-pub-5477538004615349/4131568938",
         ios: "ca-app-pub-5477538004615349/4214538452"
     }
 }
 
-function prepareAdmobInterstitial(autoShow) {
-    if (autoShow) {
-        admob.interstitial.load({
-            id: AD_KEYS.interstitial
-        }).then(function () {
-            adFailedRetry = 0;
-            admob.interstitial.show({id: AD_KEYS.interstitial});
-        });
-    } else {
+function loadInterstitial() {
+    try {
+        admob.interstitial.isLoaded().then(function (loaded) {
+            if (loaded) {
+                return
+            } else {
+                admob.interstitial.load({
+                    id: AD_KEYS.interstitial
+                })
+            }
+        })
+    } catch (e) {
         admob.interstitial.load({
             id: AD_KEYS.interstitial
         })
+    }
+}
+
+function loadAndShowInterstitial() {
+    admob.interstitial.load({
+        id: AD_KEYS.interstitial
+    }).then(function () {
+        adFailedRetry = 0;
+        admob.interstitial.show({id: AD_KEYS.interstitial});
+    });
+}
+
+function prepareAdmobInterstitial(autoShow) {
+    if (autoShow) {
+        try {
+            admob.interstitial.isLoaded().then(function (loaded) {
+                if (loaded) {
+                    admob.interstitial.show({id: AD_KEYS.interstitial});
+                } else {
+                    loadAndShowInterstitial()
+                }
+            })
+        } catch (e) {
+            loadAndShowInterstitial()
+        }
+    } else {
+        loadInterstitial()
     }
 }
 
